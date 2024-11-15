@@ -361,14 +361,14 @@ def solve_vrp_battery(data):
                     )
 
     # Solver parameters
-    mdl.parameters.workmem = 1024  # Limit working memory to 1GB
-    mdl.parameters.mip.limits.treememory = 2048  # Limit tree memory to 2GB
-    mdl.parameters.mip.strategy.file = 3  # Node files are compressed and stored on disk
-    mdl.parameters.mip.strategy.nodeselect = 1  # Best-bound node selection
-    mdl.parameters.emphasis.memory = 1  # Emphasize memory conservation
-    mdl.parameters.timelimit = 3600  # Set a time limit of 1 hour
-    mdl.parameters.preprocessing.presolve = 0  # Disable presolve
-    mdl.parameters.simplex.tolerances.feasibility = 1e-9  # Tighten feasibility tolerance
+    #mdl.parameters.workmem = 1024  # Limit working memory to 1GB
+    #mdl.parameters.mip.limits.treememory = 2048  # Limit tree memory to 2GB
+    #mdl.parameters.mip.strategy.file = 3  # Node files are compressed and stored on disk
+    #mdl.parameters.mip.strategy.nodeselect = 1  # Best-bound node selection
+    #mdl.parameters.emphasis.memory = 1  # Emphasize memory conservation
+    #mdl.parameters.timelimit = 3600  # Set a time limit of 1 hour
+    #mdl.parameters.preprocessing.presolve = 0  # Disable presolve
+    #mdl.parameters.simplex.tolerances.feasibility = 1e-9  # Tighten feasibility tolerance
 
     # Solve the model
     solution = mdl.solve(log_output=True)
